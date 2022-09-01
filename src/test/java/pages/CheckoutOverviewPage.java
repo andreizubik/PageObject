@@ -14,6 +14,10 @@ public class CheckoutOverviewPage extends BasePage {
         super(driver);
     }
 
+    public void clickFinishButton() {
+        driver.findElement(FINISH_BUTTON).click();
+    }
+
     public String getItemTotal() {
         return driver.findElement(ITEM_TOTAL).getText();
     }
@@ -24,9 +28,6 @@ public class CheckoutOverviewPage extends BasePage {
 
     public String getTotalCost() {
         return driver.findElement(TOTAL_COST).getText();
-    }
 
-    public void clickOnFinishButton() {
-        driver.findElement(FINISH_BUTTON).click();
     }
 }

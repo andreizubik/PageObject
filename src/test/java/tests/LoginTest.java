@@ -49,9 +49,25 @@ public class LoginTest extends BaseTest {
                 "Epic sadface: Password is required",
                 "Wrong error message shown");
     }
+    @Test
+    public void InsertLoginUsingCapsLock() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        loginPage.login("STANDARD_USER", "secret_sauce");
+        assertEquals(loginPage.getErrorMessage(),
+                "Epic sadface: Username and password do not match any user in this service",
+                "Wrong error message shown");
+    }
+    @Test
+    public void InsertPasswordUsingCapsLock() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        loginPage.login("standard_user", "SECRET_SAUCE");
+        assertEquals(loginPage.getErrorMessage(),
+                "Epic sadface: Username and password do not match any user in this service",
+                "Wrong error message shown");
 
-// капсом
-// empty password
+    }
 
     @DataProvider
     public Object[][] loginData() {

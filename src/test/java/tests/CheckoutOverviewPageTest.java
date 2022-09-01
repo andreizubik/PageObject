@@ -18,7 +18,7 @@ public class CheckoutOverviewPageTest extends BaseTest {
         cartPage.clickOnCheckoutButton();
         checkoutPage.fillCheckout("Ivan", "Ivanov", "24680");
         checkoutPage.clickOnFinishButton();
-        assertTrue(driver.findElement(By.id("header_container")).isDisplayed());
+        assertTrue(driver.findElement(By.id("checkout_complete_container")).isDisplayed());
     }
 
     @Test

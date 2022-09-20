@@ -22,7 +22,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Check if checkout works without first name")
     public void CheckoutWithoutFirstName() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
@@ -34,7 +34,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Check if checkout works without last name")
     public void CheckoutWithoutLastName() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
@@ -46,7 +46,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Check if checkout works without postal code")
     public void CheckoutWithoutPostalCode() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
@@ -58,7 +58,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Check if checkout works when all fields are empty")
     public void CheckoutAllFieldsAreEmpty() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");

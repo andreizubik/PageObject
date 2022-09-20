@@ -9,7 +9,7 @@ import static org.testng.Assert.assertTrue;
 
 public class CheckoutOverviewPageTest extends BaseTest {
 
-    @Test
+    @Test(description = "Check if purchase is confirmed")
     public void SuccessfulPurchaseShouldBeConfirmed() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
@@ -21,7 +21,7 @@ public class CheckoutOverviewPageTest extends BaseTest {
         assertTrue(driver.findElement(By.id("checkout_complete_container")).isDisplayed());
     }
 
-    @Test
+    @Test(description = "Check if price is correct")
     public void TotalPriceShouldBeCorrect() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");

@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class LoginTest extends BaseTest {
 
 
-    @Test
+    @Test(description = "Check if login works")
     public void sucessfulLoginTest() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
@@ -30,7 +30,7 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test
+    @Test (description = "Check if login works without user name")
         public void emptyUserName() {
             LoginPage loginPage = new LoginPage(driver);
             loginPage.open();
@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
                     "Wrong error message shown");
     }
 
-    @Test
+    @Test(description = "Check if login works without password")
     public void emptyPassword() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
@@ -49,7 +49,7 @@ public class LoginTest extends BaseTest {
                 "Epic sadface: Password is required",
                 "Wrong error message shown");
     }
-    @Test
+    @Test(description = "Check if login works using capslock")
     public void InsertLoginUsingCapsLock() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
@@ -58,7 +58,7 @@ public class LoginTest extends BaseTest {
                 "Epic sadface: Username and password do not match any user in this service",
                 "Wrong error message shown");
     }
-    @Test
+    @Test(description = "Check if password works using capslock")
     public void InsertPasswordUsingCapsLock() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();

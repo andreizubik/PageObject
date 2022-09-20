@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +20,7 @@ public class ProductPage extends BasePage {
         return driver.findElement(PAGE_TITLE).isDisplayed();
 
     }
+    @Step("Adding to cart")
     public void addToCart(String product) {
         String locator = String.format("//*[text()='%s']//ancestor::div[@class='inventory_item']//button",
                 product);

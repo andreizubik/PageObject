@@ -20,10 +20,13 @@ public class CheckoutPage extends BasePage {
     }
 
     @Step("Filling in checkout fields")
-    public void fillCheckout(String firstName, String lastName, String postalcode) {
+    public void fillCheckout(String firstName, String lastName, String postalCode) {
         driver.findElement(FIRSTNAME_FIELD).sendKeys(firstName);
         driver.findElement(LASTNAME_FIELD).sendKeys(lastName);
+        driver.findElement(POSTALCODE_FIELD).sendKeys(postalCode);
         driver.findElement(CONTINUE_BUTTON).click();
+        driver.findElement(CANCEL_BUTTON).click();
+
     }
 
     public String getError() {

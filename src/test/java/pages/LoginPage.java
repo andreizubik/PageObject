@@ -12,13 +12,14 @@ public class LoginPage extends BasePage {
     private final By LOGIN_BUTTON = By.id("login-button");
     private final By ERROR_MESSAGE = By.cssSelector("[data-test=error]");
 
-     public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
     @Step("Opening Login page")
-    public void open() {
+    public LoginPage open() {
         driver.get(BASE_URL);
+        return this;
     }
     @Step("Login by {username} using password '{password}'")
 

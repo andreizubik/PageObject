@@ -14,7 +14,11 @@ public class LoginTest extends BaseTest {
 
     @Test(description = "Check if login works")
     public void sucessfulLoginTest() {
-        loginPage.open();
+        loginPage
+                .open()
+                .login("standard_user", "secret_sauce");
+        .add
+
         loginPage.login("standard_user", "secret_sauce");
         assertTrue(productPage.isOpened(), "Titile of the page is not displayed");
 

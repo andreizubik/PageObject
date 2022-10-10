@@ -11,10 +11,16 @@ public class CheckoutOverviewPage extends BasePage {
     static By TAX = By.cssSelector(".summary_tax_label");
     static By TOTAL_COST = By.cssSelector(".summary_total_label");
 
+    private final By PAGE_TITLE = By.xpath("//span[text()='Checkout: Overview']");
+
     public CheckoutOverviewPage(WebDriver driver) {
         super(driver);
 
     }
+    public boolean isOpened() {
+        return driver.findElement(PAGE_TITLE).isDisplayed();
+    }
+
     @Step("Clicking Finish button")
     public void clickFinishButton() {
         driver.findElement(FINISH_BUTTON).click();

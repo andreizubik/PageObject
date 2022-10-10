@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
 
@@ -17,7 +16,7 @@ public abstract class BasePage {
 
     public void clickCart() {
         driver.findElement(CART).click();
-}
+    }
 
     public void clickOnFinishButton() {
     }

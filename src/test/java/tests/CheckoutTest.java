@@ -8,7 +8,7 @@ import static org.testng.Assert.assertTrue;
 
 public class CheckoutTest extends BaseTest {
 
-    @Test
+    @Test(description = "CheckoutShouldWork")
     public void CheckoutShouldWork() {
 
         loginPage.login("standard_user", "secret_sauce");
